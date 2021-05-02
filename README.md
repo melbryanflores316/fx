@@ -1,7 +1,9 @@
 # Pre-requisites
-1. install latest angur version : npm install -g @angular/cli
-2. npm install
-3. ng serve
+1. Click Code with green icon > download zip, and extract
+2. open cmd > cd [directory]
+3. install latest angular version : npm install -g @angular/cli
+4. npm install
+5. ng serve
 
 Documentation: Please see ./documentation/Fx-Documentation.xlsx
 
