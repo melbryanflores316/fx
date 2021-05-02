@@ -1,0 +1,14 @@
+:host{
+  .container {
+    background: whitesmoke;
+    width: 500px;
+    padding: 20px;
+    .conversion-rate {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .mat-form-field {
+      margin-left: 8px;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div class="container">
+  <h3>Forex Calculator</h3>
+  <h4>From</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose one</mat-label>
+    <mat-select  [value]="forex.currencyFrom" (selectionChange)="convert('currencyFrom', $event)">
+      <mat-option *ngFor="let currency of currencies" [matTooltip]="currency.description" [value]="currency.symbol">{{currency.symbol}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Amount</mat-label>
+    <input type="number" (input)="convert('amount', $event.target)"   matInput placeholder="123.45">
+  </mat-form-field>
+  <h4>To</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>Choose one</mat-label>
+    <mat-select  [value]="forex.currencyTo" (selectionChange)="convert('currencyTo', $event)">
+      <mat-option *ngFor="let currency of currencies" [matTooltip]="currency.description" [value]="currency.symbol">{{currency.symbol}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Converted Value</mat-label>
+    <input disabled type="number" [value]="(result|async)?.amount " matInput placeholder="123.45">
+  </mat-form-field>
+  <div class="conversion-rate" *ngIf="(result|async)?.conversionRate">
+    <span>1 {{forex.currencyFrom}} = </span>
+    <span>{{ ' '+(result|async)?.conversionRate | number}} {{forex.currencyTo}}</span>
+  </div>
+</div>
