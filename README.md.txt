@@ -1,5 +1,5 @@
 # Pre-requisites
-1. install latest angur version : npm install -g @angular/cli
+1. install latest angular version : npm install -g @angular/cli
 2. npm install
 3. ng serve
 
